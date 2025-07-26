@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">amazon</a>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for products, brands and more...">
+                <button class="search-btn">🔍</button>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="/" class="nav-link">🏠 Home</a>
+                <a href="/cart" class="nav-link">🛒 Cart <span class="cart-count">0</span></a>
+                <a href="/orders" class="nav-link">📦 Orders</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="section-title">🛒 Shopping Cart</h1>
+        
+        <div id="cart-items">
+            <!-- Cart items will be loaded here by JavaScript -->
+        </div>
+        
+        <div class="cart-summary" id="cart-summary" style="display: none;">
+            <h3 style="margin-bottom: 20px; color: var(--text-primary); font-size: 1.4rem;">📋 Order Summary</h3>
+            
+            <div class="summary-row">
+                <span>Items Subtotal:</span>
+                <span id="subtotal">₹0</span>
+            </div>
+            
+            <div class="summary-row">
+                <span>Shipping:</span>
+                <span id="shipping">₹99</span>
+            </div>
+            
+            <div class="summary-row" style="color: var(--success-color);">
+                <span>Discount:</span>
+                <span id="discount">₹0</span>
+            </div>
+            
+            <div class="summary-row total">
+                <span>Total Amount:</span>
+                <span id="total">₹99</span>
+            </div>
+            
+            <div style="background: var(--bg-secondary); padding: 16px; border-radius: 8px; margin: 16px 0; text-align: center;">
+                <span style="color: var(--success-color); font-weight: 600;">
+                    🚚 FREE shipping on orders above ₹499!
+                </span>
+            </div>
+            
+            <button class="checkout-btn" onclick="checkout()">
+                🎉 Proceed to Checkout
+            </button>
+        </div>
+        
+        <div id="empty-cart" style="text-align: center; padding: 80px 20px; background: var(--bg-primary); border-radius: 12px; box-shadow: var(--shadow);">
+            <div style="font-size: 4rem; margin-bottom: 20px;">🛒</div>
+            <h2 style="margin-bottom: 16px; color: var(--text-primary);">Your cart is empty</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">
+                Add some amazing products to get started!
+            </p>
+            <a href="/" class="btn-primary" style="display: inline-block; text-decoration: none; padding: 16px 32px; font-size: 18px;">
+                🛍️ Continue Shopping
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

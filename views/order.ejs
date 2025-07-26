@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">amazon</a>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for products, brands and more...">
+                <button class="search-btn">🔍</button>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="/" class="nav-link">🏠 Home</a>
+                <a href="/cart" class="nav-link">🛒 Cart <span class="cart-count">0</span></a>
+                <a href="/orders" class="nav-link">📦 Orders</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1 class="section-title">📦 Your Orders</h1>
+        
+        <div id="orders-list">
+            <!-- Orders will be loaded here by JavaScript -->
+        </div>
+        
+        <div id="no-orders" style="text-align: center; padding: 80px 20px; background: var(--bg-primary); border-radius: 12px; box-shadow: var(--shadow);">
+            <div style="font-size: 4rem; margin-bottom: 20px;">📦</div>
+            <h2 style="margin-bottom: 16px; color: var(--text-primary);">No orders found</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 1.1rem;">
+                You haven't placed any orders yet. Start shopping to see your orders here!
+            </p>
+            <a href="/" class="btn-primary" style="display: inline-block; text-decoration: none; padding: 16px 32px; font-size: 18px;">
+                🛍️ Start Shopping
+            </a>
+        </div>
+    </main>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
