@@ -171,9 +171,19 @@ app.get('/api/search', (req, res) => {
     res.json(filteredProducts);
 });
 
-app.listen(PORT, () => {
-    console.log(`🚀 Amazon Clone running on http://localhost:${PORT}`);
-    console.log('📱 Features: Interactive UI, Real-time Cart, Smooth Animations');
-});
+// app.listen(PORT, () => {
+//     console.log(`🚀 Amazon Clone running on http://localhost:${PORT}`);
+//     console.log('📱 Features: Interactive UI, Real-time Cart, Smooth Animations');
+// });
 
+//module.exports = app;
+// NEW - Use this instead:
 module.exports = app;
+
+// Only listen when running locally
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`🚀 Amazon Clone Server running on http://localhost:${PORT}`);
+    });
+}
+

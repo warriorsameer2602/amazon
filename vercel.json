@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "functions": {
+    "app.js": {
+      "runtime": "@vercel/node@18"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/app.js"
+    }
+  ]
+}
